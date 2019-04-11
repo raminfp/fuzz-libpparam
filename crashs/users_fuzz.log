@@ -1,0 +1,97 @@
+INFO: Seed: 1376031038
+INFO: Loaded 1 modules (1243 guards): [0x595e20, 0x59718c), 
+INFO: -max_len is not provided, using 64
+INFO: A corpus is not provided, starting from an empty corpus
+#0	READ units: 1
+        <user>
+            <role>local</role>
+            <full_name>Example User</full_name>
+            <username>exam</username>
+            <password>1a79a4d60de6718e8e5b326e338ae533</password>
+            <enabled>yes</enabled>
+            <login_date>2019/04/06 19:45:29</login_date>
+        </user>
+        <>
+            <>local</>
+            <></>
+            <></>
+            <></>
+            <>yes</>
+            <>2019/04/06 19:45:29</>
+        </>
+        <user>
+            <role>local</role>
+            <full_name>Example User</full_name>
+            <username>exam</username>
+            <password>1a79a4d60de6718e8e5b326e338ae533</password>
+            <enabled>yes</enabled>
+            <login_date>2019/04/06 19:45:29</login_date>
+        </user>
+        <user>
+            <role>local</role>
+            <full_name>Example User</full_name>
+            <username>exam</username>
+            <password>1a79a4d60de6718e8e5b326e338ae533</password>
+            <enabled>yes</enabled>
+            <login_date>2019/04/06 19:45:29</login_date>
+        </user>
+        <>
+            <>local</>
+            <></>
+            <></>
+            <></>
+            <>yes</>
+            <>2019/04/06 19:45:29</>
+        </>
+        <user>
+            <role>local</role>
+            <full_name>Example User</full_name>
+            <username>exam</username>
+            <password>1a79a4d60de6718e8e5b326e338ae533</password>
+            <enabled>yes</enabled>
+            <login_date>2019/04/06 19:45:29</login_date>
+        </user>
+        <user>
+            <role>local</role>
+            <full_name>Example User</full_name>
+            <username>exam</username>
+            <password>1a79a4d60de6718e8e5b326e338ae533</password>
+            <enabled>yes</enabled>
+            <login_date>2019/04/06 19:45:29</login_date>
+        </user>
+        <>
+            <>local</>
+            <></>
+            <></>
+            <></>
+            <>yes</>
+            <>2019/04/06 19:45:29</>
+        </>
+        <user>
+            <role>local</role>
+            <full_name>Example User</full_name>
+            <username>exam</username>
+            <password>1a79a4d60de6718e8e5b326e338ae533</password>
+            <enabled>yes</enabled>
+            <login_date>2019/04/06 19:45:29</login_date>
+        </user>
+
+=================================================================
+==12955==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 128 byte(s) in 2 object(s) allocated from:
+    #0 0x4bcd28 in realloc /home/fuzz/codes/libfuzzer/src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:164:3
+    #1 0x7f4aef5b96eb in g_realloc (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x536eb)
+
+SUMMARY: AddressSanitizer: 128 byte(s) leaked in 2 allocation(s).
+
+INFO: a leak has been found in the initial corpus.
+
+INFO: to ignore leaks on libFuzzer side use -detect_leaks=0.
+
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+0xa,
+\x0a
+artifact_prefix='./'; Test unit written to ./leak-adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
+Base64: Cg==
+
